@@ -1,26 +1,5 @@
--- phpMyAdmin SQL Dump
--- version 4.6.4
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Jul 31, 2017 at 07:27 AM
--- Server version: 5.7.14
--- PHP Version: 5.6.25
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `php-kuiz`
---
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `questions`
@@ -37,10 +16,6 @@ CREATE TABLE `questions` (
   `correct_answer` varchar(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `questions`
---
-
 INSERT INTO `questions` (`qid`, `qno`, `question`, `ans1`, `ans2`, `ans3`, `ans4`, `correct_answer`) VALUES
 (9, 5, 'What is a correct way to add a comment in PHP?', '&lt;!--&hellip;--&gt;', '/*&hellip;*/', '*\\..\\*', '&lt;comment&gt;&hellip;&lt;/comment&gt;', 'b'),
 (8, 3, 'The PHP syntax is most similar to:', 'Perl and C', 'VBscript', 'Javascript', 'none of these', 'a'),
@@ -54,7 +29,7 @@ INSERT INTO `questions` (`qid`, `qno`, `question`, `ans1`, `ans2`, `ans3`, `ans4
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- table `users`
 --
 
 CREATE TABLE `users` (
@@ -65,51 +40,29 @@ CREATE TABLE `users` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `users`
+-- table `questions`
 --
 
-INSERT INTO `users` (`id`, `email`, `played_on`, `score`) VALUES
-(78, 'hemant@vv.com', '2017-07-31 06:52:45', 0),
-(68, 'admin@gmail.com', '2017-07-31 05:01:43', 0),
-(77, 'root@gmail.com', '2017-07-31 06:52:09', 1),
-(70, 'anirban@gmail.com', '2017-07-31 05:58:32', 3),
-(76, 'john@gmail.com', '2017-07-31 06:51:41', 1),
-(72, 'local@gmail.com', '2017-07-31 06:01:27', 3),
-(75, 'dfgh@fgg.nn', '2017-07-31 06:43:01', 0),
-(74, 'vishal@gmail.com', '2017-07-31 06:35:35', 6),
-(79, 'rupesh@dffd.cvvc', '2017-07-31 06:53:37', 5),
-(80, 'hello@gmail.com', '2017-07-31 06:58:18', 5);
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `questions`
---
 ALTER TABLE `questions`
   ADD PRIMARY KEY (`qid`);
 
 --
--- Indexes for table `users`
+-- table `users`
 --
+
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
---
-
---
 -- AUTO_INCREMENT for table `questions`
 --
+
 ALTER TABLE `questions`
   MODIFY `qid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
 --
 -- AUTO_INCREMENT for table `users`
 --
+
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
